@@ -1,3 +1,5 @@
+/* THIS IS JUST FOR RESEARCH, I DO NOT INTEND ON KEEPING THIS CODE*/
+
 #include <stdio.h>
 
 int main(){
