@@ -5,23 +5,20 @@
 int main(){
 
 int k; //sets the key value
-char str[50]; //sets the character to be encrypted
-char e; //the result after encryption
+char str[100]; //stores the characters entered
+String e; //the result after encryption
 char d; //the result after decryption
 char c; //encrypted letter input
 int option;
 int i;
 
 printf("Please enter a message:\n");
-gets(str);
+scanf("%s", &str);
 
 printf("What would you like to do with the message?:\n")
 printf("Encrypt (1)\n");
 printf("Decrypt (2)\n");
 scanf("%d", &option);
-
-printf("Please enter a number between 0 and 25 as the secret key:\n");
-scanf("%d", &k);
 
 switch(option){
     case 1: 
@@ -50,6 +47,22 @@ switch(option){
     printf("Invalid input");
 }
 
+char encrypt(char str[100], int k, String e, char m){
+    printf("Please enter what you want encrypted.\n");
+    scanf("%s", &str);
+    printf("Please enter a number for the key between 0 and 25\n");
+    scanf("%d", &k);
+    while(k<0 || k>25){
+        printf("Invalid number, please enter a number between 0 and 25\n");
+        scanf("%d", &k);
+    }
+    e = (m+k)%26;
+    printf("The encrypted message is: %s\n", e);   
+}
+
+char decrypt(char str[100], int k, String d, char c, int i){
+    
+}
 
 /*e =(m+k)%26;
 d = (c-k)%26;*/
